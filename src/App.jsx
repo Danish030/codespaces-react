@@ -1,26 +1,30 @@
+import React, { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const increment = () => setCount(count + 1);
+  const decrement = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
+        <p className='counter'>
+          counter
         </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
+        <p>Count: {count}</p>
+        <button className="increment-button" onClick={increment}>
+          <FontAwesomeIcon icon={faPlus} />
+        </button>
+        <button className="decrement-button" onClick={decrement}>
+          <FontAwesomeIcon icon={faMinus} />
+        </button>
       </header>
     </div>
   );

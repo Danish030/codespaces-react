@@ -1,11 +1,5 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -13,19 +7,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.increment-button {
+  background-color: rgb(91, 206, 91);
+  color: white;
+  border: none;
+  padding: 5px;
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 5px;
 }
 
-.heart {
-  color: #ff0000;
+.decrement-button {
+  background-color: rgb(219, 88, 88);
+  color: white;
+  border: none;
+  padding: 5px 15px 5px 15px;
 }
 
-.small {
-  font-size: 0.75rem;
+.counter {
+  font-size: 50px;
+  margin-bottom: 5px;
+  
 }
